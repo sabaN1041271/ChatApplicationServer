@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.chatapplication.controllers.DashboardControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 3, Skipped: 0, Time elapsed: 0.277 sec <<< FAILURE! - in com.mycompany.chatapplication.controllers.DashboardControllerTest
+testAddNewTitledPane(com.mycompany.chatapplication.controllers.DashboardControllerTest)  Time elapsed: 0.265 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.Date.toGMTString()" because "dateOfMessageSent" is null
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testAddNewTitledPane(DashboardControllerTest.java:91)
+
+testSetLoggedInUserDetails(com.mycompany.chatapplication.controllers.DashboardControllerTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testSetLoggedInUserDetails(DashboardControllerTest.java:49)
+
+testOpenProfilePage(com.mycompany.chatapplication.controllers.DashboardControllerTest)  Time elapsed: 0.009 sec  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class javafx.scene.control.Labeled
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testOpenProfilePage(DashboardControllerTest.java:74)
+
+testInitialize(com.mycompany.chatapplication.controllers.DashboardControllerTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class javafx.scene.control.Control
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testInitialize(DashboardControllerTest.java:61)
+
+testGetLoggedInUserDetails(com.mycompany.chatapplication.controllers.DashboardControllerTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testGetLoggedInUserDetails(DashboardControllerTest.java:36)
+

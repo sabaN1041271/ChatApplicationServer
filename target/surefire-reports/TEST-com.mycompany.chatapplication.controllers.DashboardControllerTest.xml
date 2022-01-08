@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.chatapplication.controllers.DashboardControllerTest" time="0.277" tests="5" errors="3" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
+    <property name="sun.boot.library.path" value="/opt/jdk-17.0.1/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/ntu-user/NetBeansProjects/ChatApplicationServers/ChatApplicationJade"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/ntu-user/NetBeansProjects/ChatApplicationServers/ChatApplicationJade"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.ext.class.path" value="/home/ntu-user/netbeans-12.5/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/home/ntu-user/netbeans-12.5/netbeans/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/home/ntu-user/netbeans-12.5/netbeans/java/maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.11.0-43-generic"/>
+    <property name="library.jansi.path" value="/home/ntu-user/netbeans-12.5/netbeans/java/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/ntu-user"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="ntu-user"/>
+    <property name="java.class.path" value="/home/ntu-user/netbeans-12.5/netbeans/java/maven/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/ntu-user/netbeans-12.5/netbeans/java/maven-nblib/netbeans-eventspy.jar clean install"/>
+    <property name="java.home" value="/opt/jdk-17.0.1"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/home/ntu-user/netbeans-12.5/netbeans/java/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+  </properties>
+  <testcase name="testAddNewTitledPane" classname="com.mycompany.chatapplication.controllers.DashboardControllerTest" time="0.265">
+    <error message="Cannot invoke &quot;java.util.Date.toGMTString()&quot; because &quot;dateOfMessageSent&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Date.toGMTString()" because "dateOfMessageSent" is null
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testAddNewTitledPane(DashboardControllerTest.java:91)
+</error>
+    <system-out><![CDATA[addNewTitledPane
+com.mycompany.chatapplication.models.UserDetailsList@740fb309
+]]></system-out>
+  </testcase>
+  <testcase name="testSetLoggedInUserDetails" classname="com.mycompany.chatapplication.controllers.DashboardControllerTest" time="0.001">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testSetLoggedInUserDetails(DashboardControllerTest.java:49)
+</failure>
+    <system-out><![CDATA[setLoggedInUserDetails
+]]></system-out>
+  </testcase>
+  <testcase name="testOpenProfilePage" classname="com.mycompany.chatapplication.controllers.DashboardControllerTest" time="0.009">
+    <error message="Could not initialize class javafx.scene.control.Labeled" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class javafx.scene.control.Labeled
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testOpenProfilePage(DashboardControllerTest.java:74)
+</error>
+    <system-out><![CDATA[openProfilePage
+]]></system-out>
+  </testcase>
+  <testcase name="testInitialize" classname="com.mycompany.chatapplication.controllers.DashboardControllerTest" time="0.001">
+    <error message="Could not initialize class javafx.scene.control.Control" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class javafx.scene.control.Control
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testInitialize(DashboardControllerTest.java:61)
+</error>
+    <system-out><![CDATA[initialize
+]]></system-out>
+  </testcase>
+  <testcase name="testGetLoggedInUserDetails" classname="com.mycompany.chatapplication.controllers.DashboardControllerTest" time="0.001">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.DashboardControllerTest.testGetLoggedInUserDetails(DashboardControllerTest.java:36)
+</failure>
+    <system-out><![CDATA[getLoggedInUserDetails
+]]></system-out>
+  </testcase>
+</testsuite>

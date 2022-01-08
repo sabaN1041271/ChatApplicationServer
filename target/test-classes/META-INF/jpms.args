@@ -1,0 +1,4 @@
+--patch-module
+com.mycompany.chatapplication=_
+--add-reads
+com.mycompany.chatapplication=ALL-UNNAMED

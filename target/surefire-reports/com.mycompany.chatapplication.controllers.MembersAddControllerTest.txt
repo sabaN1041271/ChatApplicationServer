@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.chatapplication.controllers.MembersAddControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 4, Errors: 3, Skipped: 0, Time elapsed: 0.007 sec <<< FAILURE! - in com.mycompany.chatapplication.controllers.MembersAddControllerTest
+testSetLoggedInUserDetails(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testSetLoggedInUserDetails(MembersAddControllerTest.java:75)
+
+testBtnCancelClick(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class javafx.scene.control.Button
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testBtnCancelClick(MembersAddControllerTest.java:113)
+
+testSetGroupIdAndName(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testSetGroupIdAndName(MembersAddControllerTest.java:48)
+
+testGetGroupIdAndName(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testGetGroupIdAndName(MembersAddControllerTest.java:35)
+
+testBtnAddClick(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.mycompany.chatapplication.models.GroupDetails.getGroupID()" because "this.group" is null
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testBtnAddClick(MembersAddControllerTest.java:100)
+
+testInitialize(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.mycompany.chatapplication.models.GroupDetails.getGroupID()" because "this.group" is null
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testInitialize(MembersAddControllerTest.java:87)
+
+testGetLoggedInUserDetails(com.mycompany.chatapplication.controllers.MembersAddControllerTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.MembersAddControllerTest.testGetLoggedInUserDetails(MembersAddControllerTest.java:62)
+

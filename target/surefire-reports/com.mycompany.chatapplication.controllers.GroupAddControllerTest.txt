@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.chatapplication.controllers.GroupAddControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 2.036 sec <<< FAILURE! - in com.mycompany.chatapplication.controllers.GroupAddControllerTest
+testSetLoggedInUserDetails(com.mycompany.chatapplication.controllers.GroupAddControllerTest)  Time elapsed: 0.017 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.GroupAddControllerTest.testSetLoggedInUserDetails(GroupAddControllerTest.java:47)
+
+testBtnCancelClick(com.mycompany.chatapplication.controllers.GroupAddControllerTest)  Time elapsed: 1.915 sec  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at com.mycompany.chatapplication.controllers.GroupAddControllerTest.testBtnCancelClick(GroupAddControllerTest.java:85)
+Caused by: java.lang.IllegalStateException: Toolkit not initialized
+	at com.mycompany.chatapplication.controllers.GroupAddControllerTest.testBtnCancelClick(GroupAddControllerTest.java:85)
+
+testBtnCreateClick(com.mycompany.chatapplication.controllers.GroupAddControllerTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "javafx.scene.control.TextField.getText()" because "this.txtGroupName" is null
+	at com.mycompany.chatapplication.controllers.GroupAddControllerTest.testBtnCreateClick(GroupAddControllerTest.java:72)
+
+testInitialize(com.mycompany.chatapplication.controllers.GroupAddControllerTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.GroupAddControllerTest.testInitialize(GroupAddControllerTest.java:61)
+
+testGetLoggedInUserDetails(com.mycompany.chatapplication.controllers.GroupAddControllerTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at com.mycompany.chatapplication.controllers.GroupAddControllerTest.testGetLoggedInUserDetails(GroupAddControllerTest.java:34)
+
