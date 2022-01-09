@@ -25,7 +25,7 @@ public class ChatServer extends Thread {
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
     private ServerThread serverThread;
-   static Set<String> userNames = new HashSet<>();
+    public Set<String> userNames = new HashSet<>();
    static Vector<ServerThread> userThreads = new Vector<>();
     
     public ChatServer(Boolean calledFromPrivateChat, VBox ChatVBox) throws IOException{      
@@ -57,6 +57,10 @@ public class ChatServer extends Thread {
                  System.out.println("Listening to the port 8999");
             // Listen for a new connection request
             ChatServer.socket  = serverSocketGroup.accept();
+            
+             String username = new BufferedReader(new InputStreamReader(socket.getInputStream())).readLine();
+             userNames.add(username);
+             System.out.println("New Client: \"" + username + "\"\n\t     Host:" + socket.getRemoteSocketAddress());
 
              BufferedReader buffReader = new BufferedReader(new InputStreamReader(ChatServer.socket.getInputStream()));
                             BufferedWriter buffWriter = new BufferedWriter(new OutputStreamWriter(ChatServer.socket.getOutputStream()));
@@ -195,11 +199,7 @@ public class ChatServer extends Thread {
             
         }
     }
-    
-    public static Set<String> getUserNames()
-    {
-        return userNames;
-    }
+  
     
     public Boolean isServerConnected(int port) throws IOException{
         Boolean flag = false;

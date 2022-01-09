@@ -32,15 +32,27 @@
          <children>
             <Pane layoutY="3.0" prefHeight="55.0" prefWidth="475.0">
                <children>
-                  <Label fx:id="lblChannelOrUserName" layoutX="65.0" layoutY="18.0" prefHeight="15.0" prefWidth="190.0" text="Label" visible="false" />
+                  <Label fx:id="lblChannelOrUserName" layoutX="65.0" layoutY="18.0" prefHeight="15.0" prefWidth="90.0" text="Label" visible="false" />
                   <Pane fx:id="paneAddMember" layoutX="356.0" layoutY="10.0" prefHeight="35.0" prefWidth="110.0" visible="false" />
                   <Pane fx:id="paneImageOfReceiver" layoutX="11.0" layoutY="12.0" prefHeight="30.0" prefWidth="32.0" visible="false" />
+                  <Hyperlink fx:id="hplViewActiveMembers" layoutX="194.0" layoutY="14.0" onAction="#hplViewActiveMembersClick" text="View Active Members" visible="false" />
                </children>
             </Pane>
             <ScrollPane fx:id="scrollChatPane" layoutY="58.0" prefHeight="220.0" prefWidth="475.0">
                  <content>
                   <VBox fx:id="ChatVBox" prefHeight="219.0" prefWidth="457.0" />
                </content></ScrollPane>
+            <GridPane fx:id="grdViewActiveMembers" layoutY="278.0" prefHeight="15.0" prefWidth="458.0" visible="false">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="351.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblActiveUserList" prefHeight="15.0" prefWidth="351.0" />
+               </children>
+            </GridPane>
             
          </children></Pane>
    </children>
