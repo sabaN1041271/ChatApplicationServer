@@ -28,7 +28,7 @@ public class ChatServer extends Thread {
     public Set<String> userNames = new HashSet<>();
    static Vector<ServerThread> userThreads = new Vector<>();
     
-    public ChatServer(Boolean calledFromPrivateChat, VBox ChatVBox) throws IOException{      
+    public ChatServer(Boolean calledFromPrivateChat, VBox ChatVBox, String userName) throws IOException{      
         try{
            // this.serverSocket = serverSocket;
          //   System.out.println("Server is listening on port " + serverSocket.getLocalPort() + " " + serverSocket.getInetAddress());
@@ -58,16 +58,23 @@ public class ChatServer extends Thread {
             // Listen for a new connection request
             ChatServer.socket  = serverSocketGroup.accept();
             
-             String username = new BufferedReader(new InputStreamReader(socket.getInputStream())).readLine();
-             userNames.add(username);
-             System.out.println("New Client: \"" + username + "\"\n\t     Host:" + socket.getRemoteSocketAddress());
+             String userNameClient = new BufferedReader(new InputStreamReader(socket.getInputStream())).readLine();
+             userNames.add(userNameClient);
+             System.out.println("New Client: \"" + userNameClient + "\"\n\t     Host:" + socket.getRemoteSocketAddress());
+             
+             // Added clients to be broadcasted to already existing clients
+             userNames.add(userName);
+             String userNameListString = "Active members are : " + String.join(",", userNames);
+                System.out.println(userNameListString);
+         
+             
 
              BufferedReader buffReader = new BufferedReader(new InputStreamReader(ChatServer.socket.getInputStream()));
                             BufferedWriter buffWriter = new BufferedWriter(new OutputStreamWriter(ChatServer.socket.getOutputStream()));
                            
 
                             System.out.println("Creating a new handler for this client...");
-                            ServerThread newClient = new ServerThread(ChatServer.socket,ChatVBox, buffReader, buffWriter);
+                            ServerThread newClient = new ServerThread(ChatServer.socket,ChatVBox,userNameListString, buffReader, buffWriter);
 
                                  // Create a new Thread with this object.
                         Thread t = new Thread(newClient);

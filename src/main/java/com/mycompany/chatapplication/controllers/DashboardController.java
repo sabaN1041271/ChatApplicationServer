@@ -263,7 +263,7 @@ public class DashboardController implements Initializable
     }
 
     private void openConversation(String labelText, int groupId) throws IOException {
- grdViewActiveMembers.setVisible(true); ;
+ grdViewActiveMembers.setVisible(true); 
    hplViewActiveMembers.setVisible(true);
         
         lblChannelOrUserName.setText("#" +labelText);
@@ -1160,7 +1160,7 @@ public class DashboardController implements Initializable
     }
 
     private void connectToServer(Boolean calledFromPrivateChat) throws IOException {
-           server = new ChatServer(calledFromPrivateChat,ChatVBox);
+           server = new ChatServer(calledFromPrivateChat,ChatVBox, loggedInUserDetails.getUserName());
     }
 
     

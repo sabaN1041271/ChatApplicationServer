@@ -8,6 +8,7 @@ import com.mycompany.chatapplication.controllers.DashboardController;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.text.ParseException;
 import java.util.Date;
@@ -27,11 +28,15 @@ public class ServerThread implements Runnable {
     public ChatServer server;
     public VBox ChatVBox;
  
-    public ServerThread(Socket socket, VBox ChatVBox, BufferedReader buffReader, BufferedWriter buffWriter) throws IOException {
+    public ServerThread(Socket socket, VBox ChatVBox,String userNameListString, BufferedReader buffReader,  BufferedWriter buffWriter) throws IOException {
         this.socket = socket;
         this.ChatVBox = ChatVBox;
         this.bufferedReader = buffReader;
         this.bufferedWriter = buffWriter;
+        System.out.println(userNameListString);
+           buffWriter.write(userNameListString);
+            buffWriter.newLine();
+            buffWriter.flush();
         
     }
 
