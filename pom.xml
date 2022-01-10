@@ -160,5 +160,5 @@
             </plugin>
         </plugins>
     </build>
-    <name>ChatApplicationJade</name>
+    <name>ChatApplicationServer</name>
 </project>

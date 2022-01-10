@@ -250,7 +250,7 @@ public class ChatServer extends Thread {
                 while(socket.isConnected()){
                     if(socket.getLocalPort() == 6999){
                     try {
-                        if(bufferedReader != null){
+                        if(bufferedReader != null && bufferedReader.readLine() != null){  
                             String messageFromClient = bufferedReader.readLine();
                             var stringArray = messageFromClient.split("-");                  
                             DashboardController.addNewTitledPane(stringArray[0],Integer.parseInt(stringArray[1]),Integer.parseInt(stringArray[2]),Integer.parseInt(stringArray[3]) ,new Date(stringArray[4]) , vBox);

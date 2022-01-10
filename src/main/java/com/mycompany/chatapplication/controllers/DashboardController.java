@@ -80,6 +80,7 @@ public class DashboardController implements Initializable
     @FXML private GridPane grdViewActiveMembers ;
     @FXML private Hyperlink hplViewActiveMembers;
     @FXML private Label lblActiveUserList;
+    @FXML private Pane paneText;
   
    private ChatServer server;
 
@@ -264,7 +265,8 @@ public class DashboardController implements Initializable
     }
 
     private void openConversation(String labelText, int groupId) throws IOException {
- grdViewActiveMembers.setVisible(true); 
+
+        grdViewActiveMembers.setVisible(true); 
    hplViewActiveMembers.setVisible(true);
         
         lblChannelOrUserName.setText("#" +labelText);
@@ -273,6 +275,7 @@ public class DashboardController implements Initializable
         paneImageOfReceiver.setVisible(false);
         paneAddMember.setVisible(true);
            ChatVBox.getChildren().clear();
+          
         Hyperlink hpl_AddMembers = new Hyperlink("Add Members");
           FileInputStream addIcon = null;
             try {
@@ -338,7 +341,7 @@ public class DashboardController implements Initializable
      
              vVerticalFirst.getChildren().addAll(groupName,groupMessage);
              
-             vList.getChildren().add(vVerticalFirst);
+             ChatVBox.getChildren().add(vVerticalFirst);
          
          
         
@@ -422,13 +425,6 @@ public class DashboardController implements Initializable
         server.receiveMessageFromClient(ChatVBox);
         
         
-        
-        Pane paneText = new Pane();
-        paneText.setLayoutX(2);
-        paneText.setLayoutY(292);
-        paneText.setPrefHeight(60);
-        paneText.setPrefWidth(469);
-        
         TextField txtMessage = new TextField();
         txtMessage.setLayoutX(3);
         txtMessage.setLayoutY(4);
@@ -448,10 +444,9 @@ public class DashboardController implements Initializable
         paneEmoticons.setPrefHeight(30);
         paneEmoticons.setPrefWidth(200);
         addEmoticons(paneEmoticons, txtMessage);
+        paneText.getChildren().clear();
         
         paneText.getChildren().addAll(txtMessage,btnSend,paneEmoticons);
-
-        paneMembers.getChildren().add(paneText);
         
         
         btnSend.setOnAction(new EventHandler<ActionEvent>(){
@@ -741,6 +736,7 @@ public class DashboardController implements Initializable
 
     private void openConversationOfUser(String labelText, int userId) throws IOException {
          VBox vList = new VBox(10);
+      
           grdViewActiveMembers.setVisible(false); ;
    hplViewActiveMembers.setVisible(false);
          File cssfile = new File("src/main/resources/com/mycompany/chatapplication/assets/CSS/dashboard.css");
@@ -750,6 +746,7 @@ public class DashboardController implements Initializable
          paneImageOfReceiver.setVisible(true);
          lblChannelOrUserName.setStyle("-fx-font-weight:bold");
          ChatVBox.getChildren().clear();
+         
          JSONToObjectConvertorFactory factory = new JSONToObjectConvertorFactory();
          UserDetailsList userList = (UserDetailsList) factory.createObject("userDetails").convertJSONToObject("");
          String profilePictureUrlOfReceiverUser = "";
@@ -922,12 +919,6 @@ public class DashboardController implements Initializable
         
         
         
-        Pane paneText = new Pane();
-        paneText.setLayoutX(2);
-        paneText.setLayoutY(276);
-        paneText.setPrefHeight(93);
-        paneText.setPrefWidth(469);
-        
         TextField txtMessage = new TextField();
         txtMessage.setLayoutX(3);
         txtMessage.setLayoutY(4);
@@ -948,9 +939,10 @@ public class DashboardController implements Initializable
         paneEmoticons.setPrefWidth(200);
         addEmoticons(paneEmoticons, txtMessage);
         
-        paneText.getChildren().addAll(txtMessage,btnSend,paneEmoticons);
-        paneMembers.getChildren().add(paneText); 
+        paneText.getChildren().clear();
         
+        paneText.getChildren().addAll(txtMessage,btnSend,paneEmoticons);
+     
         btnSend.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent t) {
