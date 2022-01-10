@@ -7,8 +7,6 @@ package com.mycompany.chatapplication.controllers;
 import com.mycompany.chatapplication.App;
 import com.mycompany.chatapplication.factories.JSONToObjectConvertorFactory;
 import com.mycompany.chatapplication.helpers.PasswordEncryptionAES;
-import com.mycompany.chatapplication.models.GroupDetails;
-import com.mycompany.chatapplication.models.GroupDetailsList;
 import com.mycompany.chatapplication.models.UserDetails;
 import com.mycompany.chatapplication.models.UserDetailsList;
 import java.io.File;
@@ -17,17 +15,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -36,10 +30,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javax.crypto.NoSuchPaddingException;
 
 /**
  *
@@ -92,7 +84,22 @@ public class ProfileController implements Initializable {
     public void btnSaveClick(ActionEvent event) throws Exception{
         String userName = txtUserName.getText();
         String password = txtPassword.getText();
-        
+         if(txtUserName.getText().isEmpty()){
+            lblUserNameEmpty.setVisible(true);
+            lblUserNameEmpty.setText("User name cannot be empty.");
+            return;
+        }
+        else{
+              lblUserNameEmpty.setVisible(false);
+        }
+        if(txtPassword.getText().isEmpty()){
+            lblPasswordEmpty.setVisible(true);
+            lblPasswordEmpty.setText("Password cannot be empty.");
+            return;
+        }
+        else{
+              lblPasswordEmpty.setVisible(false);
+        }
          final String secretKey = "ssshhhhhhhhhhh!!!!";
      
    

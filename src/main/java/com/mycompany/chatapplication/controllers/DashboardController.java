@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.Socket;
 import java.net.URL;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -144,7 +145,7 @@ public class DashboardController implements Initializable
         GroupDetailsList groupList = (GroupDetailsList) factory.createObject("groupDetails").convertJSONToObject("");
 
         for(int i=0; i< groupList.GroupList.size();i++){
-            if(groupList.GroupList.get(i).getUserIds().contains(loggedInUserDetails.getUserID())){
+            if(groupList.GroupList.get(i).getUserIds() == null || groupList.GroupList.get(i).getUserIds().contains(loggedInUserDetails.getUserID())){
                 var btnId = "button" + "_" + i;
                 Hyperlink button_i = new Hyperlink();
                 button_i.setText("# "+ groupList.GroupList.get(i).getGroupName());
@@ -566,7 +567,7 @@ public class DashboardController implements Initializable
                    if(groupList.GroupList.get(i).getGroupID() == groupId){
                        groupName = groupList.GroupList.get(i).getGroupName();
                        fileName = groupName + "_" + "GroupChat.json";
-                       mapperIds = groupList.GroupList.get(i).getUserIds();
+                     break;
                    }
                }
          }
@@ -1160,8 +1161,26 @@ public class DashboardController implements Initializable
     }
 
     private void connectToServer(Boolean calledFromPrivateChat) throws IOException {
-           server = new ChatServer(calledFromPrivateChat,ChatVBox, loggedInUserDetails.getUserName());
+        Boolean available = true;    
+        if(calledFromPrivateChat){
+                available = DashboardController.available(6999);
+            }
+        else{
+            available = DashboardController.available(8999);
+        }
+           if(available){
+                server = new ChatServer(calledFromPrivateChat,ChatVBox, loggedInUserDetails.getUserName());
+           }
+          
     }
+    
+    private static boolean available(int port) {
+    try (Socket ignored = new Socket("localhost", port)) {
+        return false;
+    } catch (IOException ignored) {
+        return true;
+    }
+}
 
     
      public void btnLogoutClick(ActionEvent event) throws Exception{

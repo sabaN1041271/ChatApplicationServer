@@ -240,11 +240,6 @@ public class ChatServer extends Thread {
         catch(IOException ex){
             close(socket,bufferedReader, bufferedWriter);
         }
-//         for (ServerThread aUser : userThreads) {
-//
-//                aUser.sendMessageToClient(messageToClient, groupId, senderUserId, receiverUserId, dateOfSending);
-//            
-//        }
     }
     
     public void receiveMessageFromClient(VBox vBox){
@@ -274,23 +269,6 @@ public class ChatServer extends Thread {
                         Logger.getLogger(ChatServer.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     }
-//                    else{
-//                        for (ServerThread aUser : userThreads) {
-//                                String messageFromClient;
-//                            try {
-//                                messageFromClient = aUser.bufferedReader.readLine();
-//                                var stringArray = messageFromClient.split("-");
-//                                DashboardController.addNewTitledPane(stringArray[0],Integer.parseInt(stringArray[1]),Integer.parseInt(stringArray[2]),Integer.parseInt(stringArray[3]) ,new Date(stringArray[4]) , vBox);
-//                  
-//                            } catch (IOException ex) {
-//                                Logger.getLogger(ChatServer.class.getName()).log(Level.SEVERE, null, ex);
-//                            } catch (ParseException ex) {
-//                                Logger.getLogger(ChatServer.class.getName()).log(Level.SEVERE, null, ex);
-//                            }
-//                               
-//
-//                        }
-//                    }
                     }
                 }
                 

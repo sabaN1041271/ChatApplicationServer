@@ -3,7 +3,6 @@
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/ContactList.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/module-info.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/ConvertedContactListObjectFromJSON.java
-/home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/ServerXYZ.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/GroupChatDetailsList.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/ConvertedGroupDetailsObjectFromJSON.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/ServerThread.java
@@ -12,10 +11,7 @@
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/UserDetailsList.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/UserContact.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/PasswordEncryptionAES.java
-/home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/TranscriptPC.java
-/home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/Server.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/controllers/MembersAddController.java
-/home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/SimpleServer.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/UserDetails.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/Interfaces/IReadJSONFileAndConvertIntoObject.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/GroupChat.java
@@ -26,7 +22,6 @@
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/controllers/DashboardController.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/GroupDetailsList.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/AutoCompleteBox.java
-/home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/HandleAClient.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/models/GroupDetails.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/helpers/ConvertedUserDetailsObjectFromJSON.java
 /home/ntu-user/ChatApplicationFinal/ChatApplicationServer/src/main/java/com/mycompany/chatapplication/controllers/LoginController.java

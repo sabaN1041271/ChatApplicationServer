@@ -8,7 +8,6 @@ import com.mycompany.chatapplication.controllers.DashboardController;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.text.ParseException;
 import java.util.Date;
@@ -62,7 +61,7 @@ public class ServerThread implements Runnable {
           String messageFromClient="", serverMessage="";
           while(true){
               try {
-                  if(this.bufferedReader != null){
+                  if(this.bufferedReader.readLine() != null){
                   messageFromClient = this.bufferedReader.readLine();
 //                  if(messageFromClient.startsWith("The username")){
 //                      ChatServer.userNames.add(messageFromClient.split(":")[1]);
